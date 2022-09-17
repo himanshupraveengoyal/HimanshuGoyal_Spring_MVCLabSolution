@@ -10,20 +10,29 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous">
-	
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style type="text/css">
+	#modifyTable{
+		padding: 10px;
+	}
+	.tableheading{
+		align-content: center;
+	}
+</style>
 <title>Registrations</title>
 </head>
 <body>
-<h1><center><U><EM>Student's Registered</EM></U></center></h1>
-<a href="addRegistration" class="btn btn-primary">Add New Registration</a><br>
-	<table border="1" class="table">
+<div class="w3-container w3-orange">
+  <h2>Student's Registered</h2>
+</div>
+	<table border="1" class="table" id="modifyTable">
 		<thead class="thead-light">
 			<tr>
-				<th scope="col" width="5%">ID</th>
-				<th scope="col" width="35%">NAME</th>
-				<th scope="col" width="20%">DEPARTMENT</th>
-				<th scope="col" width="20%">COUNTRY</th>
-				<th scope="col" width="20%">ACTIONS</th>
+				<th class="tableheading" scope="col" width="5%">ID</th>
+				<th class="tableheading" scope="col" width="30%">NAME</th>
+				<th class="tableheading" scope="col" width="20%">DEPARTMENT</th>
+				<th class="tableheading" scope="col" width="20%">COUNTRY</th>
+				<th class="tableheading" scope="col" width="20%">ACTIONS</th>
 			</tr>
 		</thead>
 		<c:forEach items="${Students}" var="stud">
@@ -39,5 +48,7 @@
 		</tr>
 		</c:forEach>
 	</table>
+	<a href="addRegistration" class="btn btn-primary">Add New Registration</a><br>
+	
 </body>
 </html>
